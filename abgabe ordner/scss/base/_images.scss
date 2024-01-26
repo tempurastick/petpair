@@ -1,0 +1,26 @@
+.img-placeholder {
+    width: auto;
+    height: 92px;
+}
+
+.img-70vh {
+    height: 40vh;
+    width: 100%;
+    object-fit: cover;
+
+    @include media-breakpoint-up(md) {
+        height: 70vh;
+    }
+}
+
+.img-object-positon-left {
+    object-position: left;
+}
+
+.img-object-positon-right {
+    object-position: right;
+}
+
+.img-object-positon-center {
+    object-position: center;
+}

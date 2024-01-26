@@ -1,0 +1,100 @@
+.pet__card {
+    padding: $spacer $spacer*2;
+    background-color: $light-bg;
+
+    .pet__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+        .pet-name {
+            letter-spacing: 1px;
+            margin-bottom: 0;
+        }
+
+        .pet-age {
+            font-weight: $font-weight-normal;
+        }
+
+        .pet-location {
+            font-style: italic;
+        }
+    }
+}
+
+.pet-actions {
+    display: flex;
+    justify-content: center;
+    gap: $spacer;
+    margin-bottom: $spacer-md;
+}
+
+.pet-actions__item {
+    &.active {
+        zoom: 1.4;
+    }
+}
+
+.icon__container {
+    border-radius: 50%;
+    padding: 14px 8px;
+}
+
+.pet-dislike__container {
+    background-color: $secondary;
+}
+
+.pet-heart__container {
+    background-color: $primary;
+}
+
+.pet-chat__container {
+    background-color: $primary-dark;
+}
+
+.pet-like {
+    width: inherit;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+}
+
+.pet__tags__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    padding-left: 1rem;
+
+    &.pet__tags__list--absolute {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .pet__tags__item {
+        font-weight: $font-weight-bold;
+        border-radius: 24px;
+        padding: 4px 1rem;
+        @include glassmorphism;
+    }
+}
+
+.pet_card__img__wrapper {
+    position: relative;
+}
+
+.pet_cards_section__container {
+    @include media-breakpoint-up(lg) {
+        padding-right: 20% !important;
+    }
+}
+
+.pet_cards_section {
+    padding: $spacer 0;
+
+    @include media-breakpoint-up(lg) {
+        padding: $spacer 0 $spacer-xl;
+    }
+}

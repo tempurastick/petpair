@@ -1,0 +1,44 @@
+.underline-link {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        background-color: $secondary-dark;
+        transform-origin: bottom right;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover {
+        &::before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+
+    /* animation from https://cssfx.netlify.app/ */
+}
+
+.back-to-top {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: $z-index-top;
+    padding: $spacer;
+}
+
+.back-to-top__icon {
+    @include media-breakpoint-up(md) {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+a {
+    font-weight: $font-weight-bold;
+}

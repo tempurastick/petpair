@@ -1,0 +1,70 @@
+.app-dl-row {
+    margin-top: -2rem;
+}
+
+.newsletter_wrapper {
+    z-index: $z-index-6;
+    position: relative;
+
+    @include scrollAnimation(slideDown);
+}
+
+.newsletter {
+    position: relative;
+    padding: $spacer-md 0 $spacer-lg;
+    z-index: $z-index-4;
+    background-color: $light-bg;
+
+    @include media-breakpoint-up(lg) {
+        padding: $spacer-lg 0 $spacer-xl;
+    }
+
+    &::after {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        z-index: $z-index-5;
+        top: 0;
+        left: -15%;
+        right: 0;
+        bottom: 0;
+        background-image: url("@/assets/img/blob__green.svg");
+        background-repeat: no-repeat;
+    }
+
+    .row {
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        @include media-breakpoint-up(sm) {
+            padding-left: initial;
+            padding-right: initial;
+        }
+    }
+}
+
+.newsletter_img_container {
+    &.col-md-6 {
+        padding: 0;
+    }
+}
+
+.newsletter_img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+
+    @include media-breakpoint-up(md) {
+        border-radius: 1rem 0 0 1rem;
+    }
+}
+
+.newsletter_form_container {
+    padding-top: $spacer;
+    padding-bottom: $spacer*2;
+
+    @include media-breakpoint-up(md) {
+        padding: $spacer-lg $spacer*2 $spacer-lg;
+    }
+}

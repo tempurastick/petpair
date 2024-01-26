@@ -1,0 +1,40 @@
+@keyframes slideIn-right {
+    0% {
+        transform: translateX(150px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideIn-left {
+    0% {
+        transform: translateX(-40px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+    transform: translateY(20px);
+    }
+}
+
+@keyframes idle {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

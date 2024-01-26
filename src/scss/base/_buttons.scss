@@ -1,0 +1,8 @@
+.btn-primary {
+    position: relative;
+
+    &:hover {
+        background-color: $secondary;
+        border-color: $secondary;
+    }
+}

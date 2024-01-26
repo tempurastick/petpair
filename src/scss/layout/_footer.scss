@@ -1,0 +1,24 @@
+.footer {
+    background-color: $secondary;
+}
+
+.footer-links__list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-links__item {
+    margin-bottom: .25rem;
+}
+
+.footer-links__link {
+    color: $black;
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+    padding: 16px 0 4px 0;
+}
+
+.footer__logo {
+    width: 64px;
+    height: auto;
+}

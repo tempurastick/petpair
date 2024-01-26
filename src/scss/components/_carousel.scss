@@ -1,0 +1,84 @@
+.carousel-caption {
+    display: block;
+
+    position: static !important;
+    padding: $spacer $spacer-md $spacer-lg;
+
+    &.carousel-caption--left {
+        text-align: left;
+
+        @include media-breakpoint-up(sm) {
+            position: absolute !important;
+            left: 56%;
+       top: 1rem;
+            bottom: auto;
+            right: 1rem;
+        }
+
+        @include media-breakpoint-up(md) {
+            top: 20%;
+            right: 2rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            right: 10%;
+            min-width: 500px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            right: 20%;
+        }
+    }
+
+    &.carousel-caption--right {
+        text-align: left;
+
+        @include media-breakpoint-up(sm) {
+            position: absolute !important;
+            right: 56%;
+            top: 1rem;
+            bottom: auto;
+            left: 1rem;
+        }
+
+        @include media-breakpoint-up(md) {
+            top: 20%;
+            left: 2rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            left: 10%;
+            min-width: 500px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            left: 20%;
+        }
+    }
+
+    .btn {
+        display: block;
+        width: 12rem;
+        margin-top: $spacer-sm;
+        margin-bottom: $spacer;
+    }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    @include media-breakpoint-up(lg) {
+        width: 6%!important;
+    }
+}
+
+.carousel-item {
+    background-color: $light-bg;
+}
+
+.hero-slider {
+    padding-top: $spacer-lg;
+
+    @include media-breakpoint-up(md) {
+        padding-top: 0;
+    }
+}

@@ -1,0 +1,42 @@
+@mixin media-breakpoint-up($point) {
+    @if $point == sm {
+        @media (min-width: 600px) { @content; }
+    }
+    @else if $point == md {
+        @media (min-width: 900px) { @content; }
+    }
+    @else if $point == lg {
+        @media (min-width: 1200px) { @content; }
+    }
+    @else if $point == xl {
+        @media (min-width: 1440px) { @content; }
+    }
+}
+
+/*
+credit: https://dev.to/oler/using-mixins-with-scss-to-create-breakpoints-8g6
+*/
+
+@mixin glassmorphism {
+    background: rgba(255, 255, 255, 0.38);
+    border-radius: 1rem;
+    box-shadow: 0 4px 1rem rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@mixin scrollAnimation($animationName) {
+    animation: $animationName 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+}
+
+@mixin hideScrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

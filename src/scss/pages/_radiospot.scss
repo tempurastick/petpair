@@ -1,0 +1,108 @@
+.radio-spot {
+    min-height: 70vh;
+    background-color: $light-bg;
+    padding: $spacer-lg 0 $spacer-lg;
+    position: relative;
+    overflow: hidden;
+
+    @include media-breakpoint-up(md){
+        padding: $spacer-xl 0 $spacer-xl;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 8rem 0 $spacer-lg;
+    }
+
+    @include media-breakpoint-up(xl) {
+
+        padding-top: 12rem;
+    }
+
+    &::after {
+        content: "";
+        mix-blend-mode: multiply;
+        position: absolute;
+        z-index: $z-index-4;
+        top: 20%;
+        right: 0;
+        width: 400px;
+        height: 70%;
+        background-image: url("@/assets/img/pattern__checkered.png");
+        background-size: 500%;
+
+        @include media-breakpoint-up(md) {
+            width: 40%;
+            height: 70%;
+            top: 30%;
+            left: 0;
+            background-size: 260%;
+        }
+    }
+
+    &::before {
+        content: "";
+        mix-blend-mode: multiply;
+        position: absolute;
+        z-index: $z-index-4;
+        top: 0;
+        right: 0;
+        left: 0;
+        max-width: 100%;
+        height: 1230px;
+        background-image: url("@/assets/img/blob__green2.svg");
+        background-repeat: no-repeat;
+        pointer-events: none;
+        overflow: hidden;
+
+        @include media-breakpoint-up(md) {
+            top: 0;
+            left: 20%;
+            right: 0;
+            width: 80%;
+            animation: idle 4s ease-in-out infinite;
+        }
+    }
+}
+
+.radio-spot__wrapper {
+    position: relative;
+    z-index: $z-index-5;
+}
+
+.radio-spot-container {
+    position: relative;
+    z-index: $z-index-10;
+}
+
+.radio-spot-container__img_container {
+    padding: 0;
+}
+
+.radio-spot-container__img {
+    @include media-breakpoint-up(md) {
+        border-radius: 1rem 0 0 1rem;
+    }
+}
+
+.radio-spot-container__text_container {
+    padding: $spacer;
+
+    @include media-breakpoint-up(lg) {
+        padding: $spacer*2;
+    }
+
+    h1 {
+        line-height: 1.2;
+        margin-bottom: $spacer-lg;
+    }
+
+    .text-small {
+        font-weight: $font-weight-bold;
+        margin-bottom: 0;
+        line-height: 1;
+    }
+
+    .radio-spot-container__text_container__p {
+        margin-bottom: $spacer-md;
+    }
+}

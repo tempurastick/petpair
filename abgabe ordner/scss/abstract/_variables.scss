@@ -1,0 +1,37 @@
+// scss-docs-start theme-color-variables
+$primary:       #F7A7AB;
+$primary-bg-subtle: #FCDFE0;
+$primary-dark: #b43439;
+$secondary:     #A7D7F7;
+$secondary-light: #D9EEFD;
+$secondary-dark: #0070bb;
+$light-bg: #FFF8E7;
+$white: #ffffff;
+$black: #011314;
+
+$body-secondary-bg: $secondary-light;
+
+// scss-docs-end theme-color-variables
+
+// Font Weights
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$font-family-base: 'Urbanist', sans-serif;
+
+// Spacers
+$spacer-sm: .5rem;
+$spacer: 1rem;
+$spacer-md: 1.5rem;
+$spacer-lg: 3rem;
+$spacer-xl: 6rem;
+
+// z-index
+$z-index-1: 1;
+$z-index-4: 4;
+$z-index-5: 5;
+$z-index-6: 6;
+$z-index-10: 10;
+$z-index-100: 100;
+$z-index-top: 4000;
+

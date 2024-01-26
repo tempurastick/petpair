@@ -1,0 +1,115 @@
+.introduction {
+    position: relative;
+    padding: $spacer-lg $spacer-sm;
+
+    @include media-breakpoint-up(lg) {
+        padding: 10rem $spacer-sm;
+    }
+
+    &::before {
+        content: "";
+        mix-blend-mode: multiply;
+        position: absolute;
+        z-index: $z-index-1;
+        top: 0;
+        right: 0;
+        left: 0;
+        max-width: 100%;
+        height: 1230px;
+        background-image: url("@/assets/img/blob__pink.svg");
+        background-repeat: no-repeat;
+        pointer-events: none;
+        overflow: hidden;
+
+        @include media-breakpoint-up(md) {
+            top: -10rem;
+            left: 20%;
+            right: 0;
+            width: 80%;
+
+        }
+    }
+
+    &::after {
+        content: "";
+        mix-blend-mode: multiply;
+        position: absolute;
+        z-index: $z-index-4;
+        top: 20%;
+        right: 0;
+        width: 400px;
+        height: 70%;
+        background-image: url("@/assets/img/pattern__checkered.png");
+        background-size: 500%;
+
+        @include media-breakpoint-up(md) {
+            width: 40%;
+            height: 70%;
+            top: 20%;
+            right: 0;
+            background-size: 260%;
+        }
+    }
+
+
+    .introduction__item {
+        position: relative;
+        z-index: $z-index-5;
+    }
+
+    .introduction__item--phone {
+        display: flex;
+        justify-content: center;
+
+        @include media-breakpoint-up(md) {
+            justify-content: flex-start;
+        }
+    }
+}
+
+.introduction__item__phone-wrapper {
+    position: relative;
+    @include hideScrollbar;
+
+    @include media-breakpoint-up(md) {
+        @include scrollAnimation(slideIn-right);
+    }
+}
+
+.introduction__img__phone {
+    z-index: $z-index-100;
+    pointer-events: none;
+    position: relative;
+    max-width: initial;
+}
+
+.introduction__item__phone__screen {
+    width: 360px;
+    position: absolute;
+    top: 0;
+    left: 4px;
+    z-index: $z-index-10;
+    border-radius: 65px;
+    overflow-x: hidden;
+    height: 740px;
+    overflow-y: scroll;
+    @include hideScrollbar;
+}
+
+.introduction__img__phone__screen {
+    width: inherit;
+}
+
+.introduction__item__phone__screen__pet__tags {
+    padding-left: 2rem;
+    position: absolute;
+    bottom: 13%;
+}
+
+.pet-introduction {
+    margin-bottom: $spacer*2;
+}
+
+.pet-heart__container--intro {
+    padding: 8px;
+}
